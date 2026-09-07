@@ -19,6 +19,8 @@ Twilio's trial currently advertises 30 days, free voice units, and a trial phone
 7. Run exactly one call through E-mploye: load workspace → preview → request approval → authorize → wait for the result → review.
 8. Export only redacted evidence. Keep the raw Twilio and CALL-E records private and delete them after the judging proof is captured.
 
+For a deterministic private proof, the demo also ships two static TwiML responses under `public/twiml/`. Deploy the app privately, configure Twilio's inbound custom webhook to the reschedule URL for the first test, and switch it to the confirm URL for the second test. These flows speak first, collect one speech response, and end without exposing a phone number or storing the audio in the repository.
+
 Twilio may refuse to provision a suitable number or restrict voice traffic for an Argentine trial account. If that happens, stop; do not upgrade or add payment details just to force the test. Ask the CALL-E team for a temporary authorized test destination or use a willing tester in a supported country.
 
 ## What not to use
